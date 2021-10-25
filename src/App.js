@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import DetailPage from "./pages/DetailPage";
 import CartContextProvider from "../src/context/cartContext"
 import Cart from "./components/Cart/Cart";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
  
@@ -38,6 +39,7 @@ function App() {
 
         </Switch>
       </BrowserRouter>
+      <Footer />
     </div>
     </CartContextProvider>
   );

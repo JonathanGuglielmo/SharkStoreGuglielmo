@@ -4,7 +4,7 @@ nav{
   border-bottom: 2px black solid;
 }
 nav img{
-  max-width: 70%;
+  max-width: 50%;
   height: 50%;
   justify-content: center;
 
@@ -27,7 +27,7 @@ nav a{
   text-decoration: none!important;
 }
 nav a:hover{
-  color: rgb(180, 179, 110)!important;
+  color: red!important;
 }
 nav a::after{
   color: #000;
