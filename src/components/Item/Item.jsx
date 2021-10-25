@@ -12,7 +12,7 @@ const {agregarItem} = useCartContext()
 
 const onAdd = (qty) => {
   agregarItem({item:nombre , cantidad: qty , img:img})
- }
+}
   
   return (
     <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 miItem">
