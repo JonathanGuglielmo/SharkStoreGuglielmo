@@ -8,7 +8,6 @@ import "./Item.css"
 
 const Item = ({id, nombre, stock, img, price }) => {
 const {agregarItem} = useCartContext()
-// const Swal = require('sweetalert2')
 
 const onAdd = (qty) => {
   agregarItem({item:nombre , cantidad: qty , img:img})

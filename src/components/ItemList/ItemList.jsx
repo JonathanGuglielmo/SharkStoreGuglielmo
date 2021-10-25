@@ -139,7 +139,7 @@ const ItemList = ({ category }) => {
             <u>Todos</u>
           </Link></li>
           <li><Link to={`/categorias/perisferico`} className="text-dark m-4">
-            <u>Perisferico</u>
+            <u>Perisfericos</u>
           </Link></li>
           <li><Link to={`/categorias/memorias`} className="text-dark m-4">
             <u>Memorias</u>

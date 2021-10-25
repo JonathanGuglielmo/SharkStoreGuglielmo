@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Swal from 'sweetalert2'
 
 import { useCartContext } from "../../context/cartContext";
 import { higherThanStock } from "../../helpers";
@@ -10,7 +9,7 @@ function ItemCount({ stock, initial, nombre, img}) {
 
   const Swal = require('sweetalert2')
 
-  const {cartList, agregarItem} = useCartContext()
+  const {agregarItem} = useCartContext()
 
   const [qty, setQty] = useState(initial);
 
@@ -53,8 +52,6 @@ function ItemCount({ stock, initial, nombre, img}) {
         <Link to="/" className="btn btn-primary m-3">Seguir comprando</Link>
       </div> 
       )}
-      
-           
     </div>
   );
 }

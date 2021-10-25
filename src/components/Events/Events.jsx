@@ -35,7 +35,7 @@ const Events = () => {
 
     return (
         <div>
-            {/* <Formulario inputs={data} onChange={handleChange} onSubmit={handleClick} buttonText="enviar"/> */}
+            <Formulario inputs={data} onChange={handleChange} onSubmit={handleClick} buttonText="enviar"/>
             {generateForm({inputs:data,buttonText:"enviar",onChange:handleChange,onSubmit:handleClick})}
         </div>
     )

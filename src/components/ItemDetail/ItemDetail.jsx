@@ -1,28 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Swal from 'sweetalert2'
 
 import ItemCount from "../ItemCount/ItemCount";
-import { useCartContext } from "../../context/cartContext";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ nombre, img, descripcion, precio, stock}) => {
 
-  // const {cartList, agregarItem} = useCartContext()
-
-  // const [botonActivo, setBotonActivo] = useState(false) 
-
-  // function apagarBoton() {
-  //   setBotonActivo(true)
-  // }
-
-  // const Swal = require('sweetalert2')
-
-  // const onAdd = (qty) => {
-  //   Swal.fire(`HAS AGREGADO ${qty} ${nombre} AL CARRITO`)
-  //   agregarItem({item:nombre , cantidad: qty , img:img})
-  //   apagarBoton()
-  // }
   
   return (
     <div className="ItemDetail row d-flex align-items-center">
