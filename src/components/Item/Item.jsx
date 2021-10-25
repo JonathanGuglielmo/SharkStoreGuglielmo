@@ -7,8 +7,8 @@ import { useCartContext } from "../../context/cartContext";
 import "./Item.css"
 
 const Item = ({id, nombre, stock, img, price }) => {
-const {cartList, agregarItem} = useCartContext()
-const Swal = require('sweetalert2')
+const {agregarItem} = useCartContext()
+// const Swal = require('sweetalert2')
 
 const onAdd = (qty) => {
   agregarItem({item:nombre , cantidad: qty , img:img})
