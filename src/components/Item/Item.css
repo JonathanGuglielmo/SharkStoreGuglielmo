@@ -3,7 +3,7 @@
 }
 .card{
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-    height: 550px;
+    height: 600px;
     background-color: rgb(219, 219, 219);
 }
 
@@ -34,5 +34,5 @@
 .btn-ver-producto{
     width: 80%;
     margin: 1em auto;
-    background-color: red;
+    background-color: rgb(50, 170, 26);
 }
