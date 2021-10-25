@@ -3,7 +3,8 @@
 }
 .card{
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
-    height: 600px;
+    height: 550px;
+    background-color: rgb(219, 219, 219);
 }
 
 .miCard .card-body{
@@ -20,15 +21,18 @@
 
 .miCard h3{
     color: black;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .miCard a{
     text-decoration: none;
-    color: #000;
+    color: rgb(255, 255, 255);
+    border-color: none;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
 }
 
 .btn-ver-producto{
     width: 80%;
     margin: 1em auto;
+    background-color: red;
 }
