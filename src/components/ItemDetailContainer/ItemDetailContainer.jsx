@@ -9,6 +9,8 @@ import img7 from '../../img/img7.png';
 import img8 from '../../img/img8.png';
 import img9 from '../../img/img9.png';
 import img10 from '../../img/img10.png';
+import img11 from '../../img/img11.png';
+import img12 from '../../img/img12.png';
 
 
 import ItemDetail from "../ItemDetail/ItemDetail";
@@ -193,6 +195,33 @@ const ItemDetailContainer = ({ id }) => {
       tipo: "motherboard",
       precio: 30000,
       img: img10,
+    },
+    {
+      id: 11,
+      nombre: "Memoria RAM HyperX Predator RGB 8GB DDR4 3600MHZ RGB XPM",
+      descripcion: `Impresionante estilo RGB
+      Tecnología de sincronización infrarroja de HyperX patentada
+      El agresivo disipador de calor de aluminio complementa los efectos sutiles RGB
+      Rendimiento DDR4 de gran velocidad y baja latencia
+      Perfiles con certificación XMP de Intel optimizados para los últimos conjuntos de chips de Intel
+      Compatible con AMD Ryzen`,
+      stock: 30,
+      tipo: "memorias",
+      precio: 7000,
+      img: img11,
+    },
+    {
+      id: 12,
+      nombre: "Memoria Hyperx 16gb Ddr4 2666mhz Fury Luces Rgb Gamer Juegos",
+      descripcion: `Fila única, On-Die Termination (ODT), 
+      Black PCB, difusor de calor de bajo perfil, difusor de calor asimétrico FURY,
+      dieciséis bancos, Intel Extreme Memory Profiles (XMP 2.0), compatibilidad con ASUS Aura Sync, 
+      iluminación LED de colores RGB, compatibilidad con MSI Mystic Light RGB, tecnología de sincronización de infrarrojos HyperX, 
+      admite LED de RGB ASRock, AMD Ryzen Ready, compatible con Gigabyte RGB Fusion 2.0, admite HyperX NGENUITY, sin búfer`,
+      stock: 10,
+      tipo: "memorias",
+      precio: 9000,
+      img: img12,
     },
   ];
 

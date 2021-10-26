@@ -12,6 +12,8 @@ import img7 from '../../img/img7.png';
 import img8 from '../../img/img8.png';
 import img9 from '../../img/img9.png';
 import img10 from '../../img/img10.png';
+import img11 from '../../img/img11.png';
+import img12 from '../../img/img12.png';
 
 const ItemList = ({ category }) => {
   const misProductos = [
@@ -106,9 +108,27 @@ const ItemList = ({ category }) => {
       precio: 30000,
       img: img10,
     },
+    {
+      id: 11,
+      nombre: "Memoria RAM HyperX Predator RGB 8GB DDR4 3600MHZ RGB XPM",
+      descripcion: "Rendimiento DDR4 de gran velocidad y baja latencia",
+      stock: 30,
+      category: "memorias",
+      precio: 7000,
+      img: img11,
+    },
+    {
+      id: 12,
+      nombre: "Memoria Hyperx 16gb Ddr4 2666mhz Fury Luces Rgb Gamer Juegos",
+      descripcion: "DIMM de 288 espigas - 2666 MHz / PC4-21300 - CL16 - 1.2 V - sin búfer - no ECC - negro",
+      stock: 10,
+      category: "memorias",
+      precio: 9000,
+      img: img12,
+    },
   ];
 
-  let filtrarCategoria = misProductos.filter((items) => items.category == category);
+  let filtrarCategoria = misProductos.filter((items) => items.category === category);
 
   const [products, setProducts] = useState([]);
   const getProducts = new Promise((resolve, reject) => {

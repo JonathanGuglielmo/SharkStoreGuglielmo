@@ -39,8 +39,8 @@ function App() {
 
         </Switch>
       </BrowserRouter>
-      <Footer />
     </div>
+    <Footer />
     </CartContextProvider>
   );
 }

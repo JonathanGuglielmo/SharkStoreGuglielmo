@@ -48,8 +48,8 @@ function ItemCount({ stock, initial, nombre, img}) {
       </div>
       ) : (
       <div className="text-center">
-        <Link to="/cart" className="btn btn-success m-3">Terminar mi Compra</Link>
-        <Link to="/" className="btn btn-primary m-3">Seguir comprando</Link>
+        <Link to="/cart" className="btn btn-success m-3">Finalizar Compra</Link>
+        <Link to="/" className="btn btn-primary m-3">Continuar Comprando</Link>
       </div> 
       )}
     </div>

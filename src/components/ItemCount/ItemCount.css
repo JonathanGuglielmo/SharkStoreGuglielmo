@@ -14,12 +14,11 @@
     border-bottom: 1px black solid;
 }
 .btnAddCart{
-
+    background-color: black;
     justify-content: center;
     text-align: center;
     display: flex;
     margin: auto;
     width: 80%;
-
 }
 
