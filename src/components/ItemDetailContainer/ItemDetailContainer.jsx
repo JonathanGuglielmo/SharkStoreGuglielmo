@@ -165,7 +165,6 @@ const ItemDetailContainer = ({ id }) => {
       id: 9,
       nombre: "Placa De Video Nvidia Gigabyte Rtx 3080ti Gaming Oc 12gb Pc",
       descripcion: `Fabricante: Nvidia
-
       Tipo de memoria gráfica: GDDR6X
       
       Interfaz con la placa madre: PCI-Express 4.0
@@ -250,7 +249,7 @@ const ItemDetailContainer = ({ id }) => {
   const [producto, setProducto] = useState(null);
 
   useEffect(() => {
-    const getItem = misProductos.find((item) => item.id === id);
+    const getItem = misProductos.find((item) => item.id == id);
     getItem ? setProducto(getItem) : alert("error");
   }, []);
 

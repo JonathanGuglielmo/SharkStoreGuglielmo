@@ -1,6 +1,13 @@
 body{
-  background-image: linear-gradient(grey, red, grey);
+  background-image: linear-gradient(grey, rgba(255, 0, 0, 0.623), grey);
     color: rgb(255, 255, 255);
     overflow-x: hidden;
     min-height: 100vh;
   }
+
+.product-name{
+  font-size: 19px;
+  text-decoration: none;
+  margin-top: 3px;
+  color: black;
+}

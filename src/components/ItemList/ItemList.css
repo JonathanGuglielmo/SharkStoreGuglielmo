@@ -13,10 +13,10 @@
 
 .ul-productos li{
     list-style: none;
+    text-decoration: none;
 }
 
 .ul-productos li:hover{
-    background-color: black;
     border-radius: 5px;
 }
 
@@ -29,5 +29,4 @@
 
 .ul-productos li u:hover{
     color: red;
-    text-decoration: underline;
 }

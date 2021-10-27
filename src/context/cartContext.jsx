@@ -17,7 +17,7 @@ function CartContextProvider({ children }) {
     console.log(cartList)
 
     function setearCartState() {
-        if (cantidadItems === 0) {
+        if (cantidadItems == 0) {
             setCartState("none")
         } else {
             setCartState("flex")
@@ -51,7 +51,7 @@ function CartContextProvider({ children }) {
         setCartList(cartList.splice(productoAEliminar, 1));
         setSubTotal(subTotal - (item.cantidad * item.price));
         setearCartState()
-        if(subTotal <= 0 || subTotal === 0){
+        if(subTotal <= 0 || subTotal == 0){
             setCartList([])
             setSubTotal(0)
             setCantidadItems(0)

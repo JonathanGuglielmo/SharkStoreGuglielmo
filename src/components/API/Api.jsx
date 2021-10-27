@@ -16,8 +16,16 @@ const Api = () => {
     }
   };
 
+//   const tarea = new Promise ((reseolve, reject)=> {
+//     resolve({id:1,nombre:"Dami"})
+// }) 
 
   useEffect(() => {
+    // fetch("https://pokeapi.co/api/v2/pokemon")
+    // .then((res)=> res.json())
+    // .catch((err) => console.log(err))
+    // .then((res) => console.log(res.data))
+
     getAllPokemons();
   }, []);
 
