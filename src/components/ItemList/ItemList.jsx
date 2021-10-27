@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { Link } from "react-router-dom";
 import "./ItemList.css"
 import Item from "../Item/Item";
@@ -15,8 +15,9 @@ import img10 from '../../img/img10.png';
 import img11 from '../../img/img11.png';
 import img12 from '../../img/img12.png';
 
-const ItemList = ({ category }) => {
-  const misProductos = [
+const ItemList = memo(
+  ({ category }) => {
+    const misProductos = [
     {
       id: 1,
       nombre: "Monitor Samsung Curvo 24 pulgadas",
@@ -96,7 +97,7 @@ const ItemList = ({ category }) => {
       descripcion: "Tipo de memoria gráfica: GDDR6X .Interfaz con la placa madre: PCI-Express 4.0",
       stock: 12,
       category: "placas",
-      precio: 350,
+      precio: 350000,
       img: img9,
     },
     {
@@ -128,12 +129,16 @@ const ItemList = ({ category }) => {
     },
   ];
 
-  let filtrarCategoria = misProductos.filter((items) => items.category === category);
+  let filtrarCategoria = misProductos.filter(
+    (items) => items.category === category
+  );
 
   const [products, setProducts] = useState([]);
   const getProducts = new Promise((resolve, reject) => {
     setTimeout(() => {
-      {category == undefined ? resolve(misProductos) : resolve(filtrarCategoria)}
+        category === undefined
+          ? resolve(misProductos)
+          : resolve(filtrarCategoria)
     }, 3000);
   });
 
@@ -148,28 +153,38 @@ const ItemList = ({ category }) => {
   };
   useEffect(() => {
     getProductsFromDB();
-  }, [category]);
+  }, );
 
   return (
     <div className="mt-3">
       <div className="text-center d-flex align-items-center justify-content-center row div-filtros">
         <p className="m-3 col-12">Filtrar productos</p>
         <ul className="justify-content-center ul-productos">
-          <li><Link to={`/`} className="text-dark m-4">
-            <u>Todos</u>
-          </Link></li>
-          <li><Link to={`/categorias/perisferico`} className="text-dark m-4">
-            <u>Perisfericos</u>
-          </Link></li>
-          <li><Link to={`/categorias/memorias`} className="text-dark m-4">
-            <u>Memorias</u>
-          </Link></li>
-          <li><Link to={`/categorias/motherboard`} className="text-dark m-4">
-            <u>Motherboard</u>
-          </Link></li>
-          <li><Link to={`/categorias/placas`} className="text-dark m-4">
-            <u>Placas</u>
-          </Link></li>
+          <li>
+            <Link to={`/`} className="text-dark m-4">
+              <u>Todos</u>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/categorias/perisferico`} className="text-dark m-4">
+              <u>Perisfericos</u>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/categorias/placas`} className="text-dark m-4">
+              <u>Placas</u>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/categorias/motherboard`} className="text-dark m-4">
+              <u>Motherboard</u>
+            </Link>
+          </li>
+          <li>
+            <Link to={`/categorias/memorias`} className="text-dark m-4">
+              <u>Memorias</u>
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="row justify-content-center mi-div-item">
@@ -186,8 +201,13 @@ const ItemList = ({ category }) => {
           ))
         ) : (
           <div>
-            <p className="text-dark text-center w-100">Cargando productos...</p>
-            <div className="text-center d-flex align-items-center justify-content-center" style={{ height: "80vh" }}>
+            <p className="text-dark text-center w-100">
+              Cargando productos...
+            </p>
+            <div
+              className="text-center d-flex align-items-center justify-content-center"
+              style={{ height: "80vh" }}
+            >
               <div className="spinner-grow text-dark" role="status">
                 <span className="visually-hidden">Loading...</span>
               </div>
@@ -197,6 +217,8 @@ const ItemList = ({ category }) => {
       </div>
     </div>
   );
-};
+},
+(oldProps, newProps) => console.log(newProps)
+);
 
 export default ItemList;

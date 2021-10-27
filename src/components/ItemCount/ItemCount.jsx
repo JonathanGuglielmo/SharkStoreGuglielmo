@@ -5,9 +5,9 @@ import { useCartContext } from "../../context/cartContext";
 import { higherThanStock } from "../../helpers";
 import "./ItemCount.css";
 
-function ItemCount({ stock, initial, nombre, img}) {
+function ItemCount({id, stock, initial, nombre, img, precio}) {
 
-  const Swal = require('sweetalert2')
+  
 
   const {agregarItem} = useCartContext()
 
@@ -22,8 +22,8 @@ function ItemCount({ stock, initial, nombre, img}) {
   };
   
   const onAdd = (qty) => {
-    Swal.fire(`HAS AGREGADO ${qty} ${nombre} AL CARRITO`)
-    agregarItem({item:nombre , cantidad: qty , img:img})
+    
+    agregarItem({item:nombre , cantidad:qty , img:img, precio:precio, stock:stock, id:id})
     apagarBoton()
   }
   
@@ -48,10 +48,11 @@ function ItemCount({ stock, initial, nombre, img}) {
       </div>
       ) : (
       <div className="text-center">
-        <Link to="/cart" className="btn btn-success m-3">Finalizar Compra</Link>
-        <Link to="/" className="btn btn-primary m-3">Continuar Comprando</Link>
+        <Link to="/cart" className="btn btn-success m-3">Terminar mi Compra</Link>
+        <Link to="/" className="btn btn-primary m-3">Seguir comprando</Link>
       </div> 
       )}
+
     </div>
   );
 }

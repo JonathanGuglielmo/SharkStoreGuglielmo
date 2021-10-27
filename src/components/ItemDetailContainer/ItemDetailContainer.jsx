@@ -250,7 +250,7 @@ const ItemDetailContainer = ({ id }) => {
   const [producto, setProducto] = useState(null);
 
   useEffect(() => {
-    const getItem = misProductos.find((item) => item.id == id);
+    const getItem = misProductos.find((item) => item.id === id);
     getItem ? setProducto(getItem) : alert("error");
   }, []);
 
@@ -258,6 +258,7 @@ const ItemDetailContainer = ({ id }) => {
     <div className="text-center">
       {producto && products.length ? (
         <ItemDetail
+          id={producto.id}
           nombre={producto.nombre}
           img={producto.img}
           descripcion={producto.descripcion}
